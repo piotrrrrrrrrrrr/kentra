@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kentra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/purple-logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/purple-logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/purple-logo.png">
+
+</head>
+<body>
+
+<nav class="navbar-container">
+  <div class="logo-name-container">
+    <img src="images/purple-logo.png" alt="purple-logo" class="logo">
+    <h1><a href="#" class="logo-text">KENTRA</a></h1>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="link-container" id="nav-links">
+    <ul>
+      <li class="links"><a href="#hero">Homepage</a></li>
+      <li class="links"><a href="#features">Features</a></li>
+      <li class="links"><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <a href="#contact" class="contact-btn">Contact Us</a>
+</nav>
+
+<header class="hero-section" id="hero">
+  <div class="hero-text">
+    <h1>Discover, Organize,<br>Effortlessly</h1>
+    <p>Analyze and extract document data, decide faster.</p>
+  </div>
+  <div class="cta">
+    <p><a href="#contact">Sign up for early access!</a></p>
+  </div>
+</header>
+
+<section class="features" id="features">
+  <h2>Our Features</h2>
+  <div class="features-container">
+    <div class="feature-card">
+      <img src="images/document-scanner-icon.svg" alt="Feature 1 Icon">
+      <h3>Smart Organization</h3>
+      <p>Automatically categorize and organize all your documents efficiently.</p>
+    </div>
+    <div class="feature-card">
+      <img src="images/document-icon.svg" alt="Feature 2 Icon">
+      <h3>Quick Search</h3>
+      <p>Find exactly what you need in seconds with our advanced search.</p>
+    </div>
+    <div class="feature-card">
+      <img src="images/insights-icon.svg" alt="Feature 3 Icon">
+      <h3>Instant Insights</h3>
+      <p>Extract actionable data and make decisions faster than ever.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Get in Touch</h2>
+  <p>Stay updated and connect with us!</p>
+  <div class="contact-container">
+
+    <form id="email-form" class="email-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="text" name="bot-field" style="display: none;">
+      <div class="email-row">
+        <input type="email" id="email" name="EMAIL" placeholder="Enter your email" required>
+        <button type="submit">Join</button>
+      </div>
+      <div class="consent-checkbox">
+        <label>
+          <input type="checkbox" name="consent" required>
+          I agree to receive newsletters and promotional emails.
+        </label>
+      </div>
+    </form>
+
+    <p id="form-message" style="margin-top:10px; font-size:0.95rem;"></p>
+
+    <div class="social-icons">
+      <a href="#">Instagram</a>
+    </div>
+
+    <div class="tos-pp">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms Of Service</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 KENTRA. All rights reserved.</p>
+</footer>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('show');
+});
+
+const emailForm = document.getElementById("email-form");
+const emailInput = document.getElementById("email");
+const message = document.getElementById("form-message");
+
+if (emailForm) {
+  emailForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const email = emailInput.value.trim();
+    const mailchimpURL = "https://site.us18.list-manage.com/subscribe/post-json?u=a5df8a878779dcba835674c0f&id=b6ec7a8e55&c=?";
+    message.style.color = "#dbeafe";
+    message.textContent = "Submitting...";
+    fetch(mailchimpURL + `&EMAIL=${encodeURIComponent(email)}`, {
+      method: "GET",
+      mode: "no-cors",
+    })
+    .then(() => {
+      message.style.color = "#4ade80";
+      message.textContent = "✅ Thanks for subscribing!";
+      emailInput.value = "";
+    })
+    .catch(() => {
+      message.style.color = "#f87171";
+      message.textContent = "❌ Something went wrong. Please try again.";
+    });
+  });
+}
+
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+});
+
+const reveals = document.querySelectorAll('.reveal');
+function revealOnScroll() {
+  const triggerBottom = window.innerHeight * 0.85;
+  reveals.forEach(el => {
+    const boxTop = el.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) {
+      el.classList.add('visible');
+    }
+  });
+}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+</script>
+
+</body>
+</html>
