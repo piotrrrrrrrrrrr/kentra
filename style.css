@@ -1,193 +1,183 @@
-/* --- RESET I FONT --- */
 * {
-    font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    box-sizing: border-box;
+  font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  box-sizing: border-box;
 }
 
-/* --- BODY + ANIMOWANY GRADIENT --- */
 body {
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    background: linear-gradient(-45deg, #6a0dad, #3b82f6, #1e40af, #9333ea);
-    background-size: 400% 400%;
-    background-attachment: fixed;
-    animation: gradientBG 30s ease infinite;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  background: linear-gradient(-45deg, #6a0dad, #3b82f6, #1e40af, #9333ea);
+  background-size: 400% 400%;
+  background-attachment: fixed;
+  animation: gradientBG 30s ease infinite;
 }
 
 @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* --- NAVBAR --- */
 .navbar-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 100px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 999;
+  position: fixed;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 100px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 999;
 }
 
 .logo-name-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .logo {
-    width: 30px;
-    height: 30px;
-    border-radius: 30%;
-    object-fit: contain;
-    transition: all 0.3s ease;
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  object-fit: contain;
+  transition: all 0.3s ease;
 }
 
 .logo:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 .logo-name-container h1 {
-    margin: 0;
-    line-height: 30px;
-    font-size: 1.3rem;
+  margin: 0;
+  line-height: 30px;
+  font-size: 1.3rem;
 }
 
 .logo-text {
-    text-decoration: none;
-    font-weight: 700;
-    color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
 }
 
 .link-container ul {
-    display: flex;
-    gap: 40px;
-    list-style: none;
+  display: flex;
+  gap: 40px;
+  list-style: none;
 }
 
 .link-container a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    transition: all 0.3s ease;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .link-container a:hover {
-    color: #dbeafe;
+  color: #dbeafe;
 }
 
 .contact-btn {
-    text-decoration: none;
-    border: 2px solid #fff;
-    border-radius: 50px;
-    background-color: #fff;
-    color: #3b82f6;
-    padding: 6px 18px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #3b82f6;
+  padding: 6px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .contact-btn:hover {
-    background-color: transparent;
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
 }
 
-/* --- HERO SECTION --- */
 .hero-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 20px;
-    gap: 20px;
-    scroll-snap-align: start;
-    background: transparent;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  gap: 20px;
+  scroll-snap-align: start;
+  background: transparent;
 }
 
 .hero-text h1 {
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .hero-text p {
-    font-size: 20px;
-    max-width: 600px;
-    opacity: 0.9;
+  font-size: 20px;
+  max-width: 600px;
+  opacity: 0.9;
 }
 
 .cta a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #fff;
-    border-radius: 50px;
-    background-color: #fff;
-    color: #3b82f6;
-    padding: 10px 24px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none; /* dodaj, żeby link nie miał podkreślenia */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background-color: #fff;
+  color: #3b82f6;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .cta a:hover {
-    transform: translateY(-2px);
-    background-color: transparent;
-    color: #fff;
-    box-shadow: 0 6px 14px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  background-color: transparent;
+  color: #fff;
+  box-shadow: 0 6px 14px rgba(255, 255, 255, 0.3);
 }
 
-
-/* --- SEKCJE --- */
 section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    scroll-snap-align: start;
-    text-align: center;
-    padding: 0 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .features {
-    background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .contact {
-    background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
-/* --- SCROLL SNAP --- */
 html, body {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
-
-/* features */
 
 .features-container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  flex-wrap: wrap;
   margin-top: 30px;
 }
 
@@ -196,8 +186,7 @@ html, body {
   backdrop-filter: blur(8px);
   border-radius: 15px;
   padding: 20px;
-  text-align: center;
-  width: 250px;
+  text-align:center;
   transition: transform 0.3s;
 }
 
@@ -210,6 +199,14 @@ html, body {
   margin-bottom: 15px;
 }
 
+.feature-card,
+.benefit-card,
+.how-step {
+  width: 90%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
 .feature-card h3 {
   margin-bottom: 10px;
   font-size: 1.2rem;
@@ -220,8 +217,6 @@ html, body {
   color: #e0e0e0;
 }
 
-
-/* ----------------- CONTACT ----------------- */
 .contact {
   min-height: 100vh;
   display: flex;
@@ -247,43 +242,6 @@ html, body {
   color: #e0e0e0;
 }
 
-/* Email form */
-.email-form {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.email-form input[type="email"] {
-  padding: 12px 18px;
-  border-radius: 50px;
-  border: none;
-  outline: none;
-  width: 250px;
-  font-size: 1rem;
-  color: black;
-}
-
-.email-form button {
-  padding: 12px 24px;
-  border-radius: 50px;
-  border: 2px solid #fff;
-  background-color: #fff;
-  color: #3b82f6;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.email-form button:hover {
-  background-color: transparent;
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
-}
-
-/* Social icons */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -312,25 +270,21 @@ footer {
   width: 100%;
 }
 
-.tos-pp {
+.contact {
+  position: relative;
+  padding-bottom: 120px;
+}
+
+.tos-pp { 
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.contact {
-  position: relative;
-  padding-bottom: 120px; /* miejsce na dolne linki */
-}
-
-.tos-pp {
   position: absolute;
   bottom: 20px;
   left: 0;
   width: 100%;
   text-align: center;
   display: flex;
-  justify-content: center;
   gap: 20px;
 }
 
@@ -344,13 +298,12 @@ footer {
   text-decoration: underline;
 }
 
-/* --- HAMBURGER ICON --- */
 .hamburger {
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 6px; /* Odstęp między liniami */
+  gap: 6px;
   cursor: pointer;
   z-index: 1001;
   width: 30px;
@@ -366,9 +319,8 @@ footer {
   transform-origin: center;
 }
 
-/* Hamburger active (X) - POPRAWIONE WARTOŚCI DLA LEPSZEGO WYGLĄDU */
 .hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 7px); /* Dostosowane: ramię górne, przesunięcie o ok. 2x gap + połowa grubości */
+  transform: rotate(45deg) translate(6px, 7px); 
 }
 
 .hamburger.active span:nth-child(2) {
@@ -376,10 +328,197 @@ footer {
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -7px); /* Dolne ramię */
+  transform: rotate(-45deg) translate(5px, -7px);
 }
 
-/* --- RESPONSYWNOŚĆ --- */
+#form-message {
+  transition: opacity 0.4s ease;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.trustbar {
+  width: 100%;
+  background-color: rgba(255,255,255,0.15);
+  color: #fff;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 6px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+  backdrop-filter: blur(8px);
+}
+
+.benefits {
+  background: rgba(255,255,255,0.05);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.benefits h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.benefits-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.benefit-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-card img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+.how-it-works {
+  background: rgba(255,255,255,0.05);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.how-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.how-step {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.how-step:hover {
+  transform: translateY(-5px);
+}
+
+.how-step img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.how-step h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.how-step p {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+
+#pre-kickoff-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.form-row input {
+  padding: 12px 16px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: black;
+}
+
+#pre-kickoff-form button {
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  background-color: #fff;
+  color: #3b82f6;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#pre-kickoff-form button:hover {
+  background-color: transparent;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+}
+
+
+@media (max-width: 900px) {
+  .features-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .features-container,
+  .benefits-container,
+  .how-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .feature-card,
+  .benefit-card,
+  .how-step {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -388,7 +527,7 @@ footer {
   .link-container {
     position: absolute;
     text-align: center;
-    top: 60px; /* Dopasuj do wysokości navbar */
+    top: 60px; 
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -399,11 +538,11 @@ footer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease;
-    z-index: 1000; /* Nad innymi elementami */
+    z-index: 1000; 
   }
 
   .link-container.show {
-    max-height: 300px; /* Wystarczająco na linki */
+    max-height: 300px;
     padding: 20px 0;
   }
 
@@ -418,43 +557,70 @@ footer {
   .contact-btn {
     display: none;
   }
-
-  /* Dodatkowe: Ukryj przycisk kontakt w navbar na mobile, jeśli potrzeba */
 }
 
-#form-message {
-  transition: opacity 0.4s ease;
-  font-weight: 500;
-  opacity: 0.9;
-}
+@media (max-width: 768px) {
+  .features-container,
+  .benefits-container,
+  .how-container {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 
-/* === FADE-IN całej strony === */
+  .feature-card,
+  .benefit-card,
+  .how-step {
+    width: 90% !important;
+    max-width: 350px;
+    margin: 0 auto;
+  }
 
+  .hero-text h1 {
+    font-size: 32px !important;
+    line-height: 1.3;
+  }
+  .hero-text p {
+    font-size: 16px !important;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .cta a {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
 
-.email-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  max-width: 400px; /* dopasuj do swoich potrzeb */
-  margin: 0 auto;
-}
+  #pre-kickoff-form input,
+  #pre-kickoff-form button {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
 
-.email-row {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-}
+  .tos-pp {
+    flex-direction: column;
+    gap: 10px;
+    bottom: 10px;
+    padding-bottom: 20px;
+  }
 
-.email-row input[type="email"] {
-  flex: 1; /* email zajmuje całą dostępną szerokość oprócz przycisku */
-}
+  .hero-text h1,
+  .hero-text p,
+  section p {
+    word-break: break-word;
+  }
 
-.email-row button {
-  flex-shrink: 0;
-}
-
-.consent-checkbox {
-  margin-top: 10px;
-  font-size: 0.9rem;
+  .features-container,
+  .benefits-container,
+  .how-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
 }
