@@ -497,6 +497,7 @@ footer {
 }
 
 
+
 @media (max-width: 900px) {
   .features-container {
     grid-template-columns: repeat(2, 1fr);
@@ -516,6 +517,107 @@ footer {
     width: 90%;
     margin: 0 auto;
   }
+}
+.dashboard-mockup {
+  padding: 60px 20px;
+  color: #dbeafe;
+  text-align: center;
+}
+
+.dashboard-mockup h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.dashboard-mockup p {
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+.dashboard-card {
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.dashboard-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.dashboard-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  margin: auto;
+}
+
+.roi {
+  padding: 60px 20px;
+  text-align: center;
+  color: #1e293b;
+}
+
+.roi h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.roi-table {
+  margin: 20px auto 0 auto;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 500px;
+}
+
+.roi-table th,
+.roi-table td {
+  border: 1px solid #cbd5e1;
+  padding: 12px;
+}
+
+.roi-table th {
+  background-color: #4c76ad;
+  font-weight: 600;
+}
+
+.easy-start {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.easy-start h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.easy-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.step-card {
+  background: #3b82f6;
+  padding: 25px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.step-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
 }
 
 
